@@ -10,7 +10,7 @@ const bookSlice = createSlice({
     },
     updateBook: (state, action) => {
       const { id, book, category, price } = action.payload;
-      const updateBook = state.find((book) => book.id === id);
+      const updateBook = state.find((book) => book.id == id);
       if (updateBook) {
         updateBook.book = book;
         updateBook.category = category;
@@ -19,7 +19,7 @@ const bookSlice = createSlice({
     },
     deleteBook: (state, action) => {
       const { id } = action.payload;
-      const updateBook = state.find((book) => book.id === id);
+      const updateBook = state.find((book) => book.id == id);
       if (updateBook) {
         return state.filter((x) => x.id !== id);
       }

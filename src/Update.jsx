@@ -6,7 +6,7 @@ import { updateBook } from './BookReducer';
 const Update = () => {
   const { id } = useParams();
   const books = useSelector((state) => state.books);
-  const currentBook = books.filter((x) => x.id === id);
+  const currentBook = books.filter((x) => x.id == id);
   const { book, category, price } = currentBook[0];
 
   const [ubook, setBook] = useState(book);

@@ -7,7 +7,7 @@ const Home = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const handleDelete = (id) => {
-    dispatch(deleteBook({id:id}))
+    dispatch(deleteBook({ id: id }));
   };
 
   return (
